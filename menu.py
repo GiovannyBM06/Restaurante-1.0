@@ -21,3 +21,6 @@ postre5 = postre("Gelatina", 2.00, "uva")
 PLATOFUERTES = [bandeja1, bandeja2, bandeja3, bandeja4, bandeja5]
 BEBIDAS = [bebida1, bebida2, bebida3, bebida4, bebida5]
 POSTRES = [postre1, postre2, postre3, postre4, postre5] 
+
+for plato in PLATOFUERTES:
+    print(plato.mostrar())
