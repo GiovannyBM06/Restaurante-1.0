@@ -1,4 +1,4 @@
-from OPERACIONES import *
+from CUENTA import *
 operaciones = OPERACIONES()
 
 
