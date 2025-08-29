@@ -1,7 +1,7 @@
-from src.PLATOFUERTE import *
-from src.BEBIDA import *
-from src.POSTRES import *  
-from src.COMIDA import *
+from PLATOFUERTE import *
+from BEBIDA import *
+from POSTRES import *  
+from COMIDA import *
 
 bandeja1 = PLATOFUERTE("Arroz con pollo", 12.50, ["arroz", "pollo", "verduras"])
 bandeja2 = PLATOFUERTE("Carne asada", 15.00, ["carne", "papas", "ensalada"])
