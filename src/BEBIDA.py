@@ -1,4 +1,4 @@
-from src.COMIDA import *
+from COMIDA import *
 class BEBIDA(COMIDA):
     def __init__(self, nombre:str, precio:float, onzas:float):
         super().__init__(nombre, precio)
