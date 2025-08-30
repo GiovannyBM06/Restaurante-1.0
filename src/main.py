@@ -27,35 +27,54 @@ def main():
 
         if op == "1":
             mostrar_platos(platosfuertes, "Platos Fuertes")
-            eleccion = int(input("Seleccione el número del plato que desea ordenar: "))
-            if 1 <= eleccion <= len(platosfuertes):
-                operaciones.ordenar(platosfuertes[eleccion - 1])
-                print(f"Has ordenado: {platosfuertes[eleccion - 1].nombre} - ${platosfuertes[eleccion - 1].get_precio()}")
-            else:
-                print("Opción inválida. Por favor, intente de nuevo.")
+            while True:
+                try:
+                    eleccion = int(input("Seleccione el número del plato que desea ordenar: "))
+                    if 1 <= eleccion <= len(platosfuertes):
+                        operaciones.ordenar(platosfuertes[eleccion - 1])
+                        print(f"Has ordenado: {platosfuertes[eleccion - 1].nombre} - ${platosfuertes[eleccion - 1].get_precio()}")
+                        break
+                    else:
+                        print("Opción inválida. Por favor, intente de nuevo.")
+                except ValueError:
+                    print("Entrada inválida. Por favor, ingrese un número.")
         elif op == "2":
             mostrar_platos(bebidas, "Bebidas")
-            eleccion = int(input("Seleccione el número de la bebida que desea ordenar: "))
-            if 1 <= eleccion <= len(bebidas):
-                operaciones.ordenar(bebidas[eleccion - 1])
-                print(f"Has ordenado: {bebidas[eleccion - 1].nombre}- ${bebidas[eleccion - 1].get_precio()}")
-            else:
-                print("Opción inválida. Por favor, intente de nuevo.")
+            while True:
+                try:
+                    eleccion = int(input("Seleccione el número de la bebida que desea ordenar: "))
+                    if 1 <= eleccion <= len(bebidas):
+                        operaciones.ordenar(bebidas[eleccion - 1])
+                        print(f"Has ordenado: {bebidas[eleccion - 1].nombre}- ${bebidas[eleccion - 1].get_precio()}")
+                        break
+                    else:
+                        print("Opción inválida. Por favor, intente de nuevo.")
+                except ValueError:
+                    print("Entrada inválida. Por favor, ingrese un número.")
         elif op == "3":
             mostrar_platos(postres, "Postres")
-            eleccion = int(input("Seleccione el número del postre que desea ordenar: "))
-            if 1 <= eleccion <= len(postres):
-                operaciones.ordenar(postres[eleccion - 1])
-                print(f"Has ordenado: {postres[eleccion - 1].nombre}-${postres[eleccion - 1].get_precio()}")
-            else:
-                print("Opción inválida. Por favor, intente de nuevo.")
-
+            while True:
+                try:
+                    eleccion = int(input("Seleccione el número del postre que desea ordenar: "))
+                    if 1 <= eleccion <= len(postres):
+                        operaciones.ordenar(postres[eleccion - 1])
+                        print(f"Has ordenado: {postres[eleccion - 1].nombre}-${postres[eleccion - 1].get_precio()}")
+                        break
+                    else:
+                        print("Opción inválida. Por favor, intente de nuevo.")
+                except ValueError:
+                    print("Entrada inválida. Por favor, ingrese un número.")
         elif op == "4":
             print(f"\nTotal a pagar: ${operaciones.total_pagar()} \n (no incluye propina)")
 
         elif op == "5":
-            porcentaje = float(input("Ingrese el porcentaje de propina que desea dejar: "))
-            print(operaciones.propina(porcentaje))
+            while True:    
+                try:
+                    porcentaje = float(input("Ingrese el porcentaje de propina que desea dejar: "))
+                    print(operaciones.propina(porcentaje))
+                    break
+                except ValueError:
+                    print("Entrada inválida. Por favor, ingrese un número.")
         elif op == "0":
             print("Gracias por visitarnos. ¡Hasta luego!")
             break
