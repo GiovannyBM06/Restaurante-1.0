@@ -1,7 +1,6 @@
 from CUENTA import *
 operaciones = OPERACIONES()
 
-
 while True:
     opcion = input("¿Qué deseas ordenar? ")
     print(operaciones.ordenar(opcion))
