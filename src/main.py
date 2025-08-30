@@ -26,7 +26,6 @@ def main():
         op = input("Selecione una opción: ")
 
         if op == "1":
-            print("Esta es la opcion 1")
             mostrar_platos(platosfuertes, "Platos Fuertes")
             eleccion = int(input("Seleccione el número del plato que desea ordenar: "))
             if 1 <= eleccion <= len(platosfuertes):
