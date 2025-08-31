@@ -67,14 +67,14 @@ Ejecuta lo siguente
 ```bash
 cd Restaurante
 ```
-posteriormente a la carpeta src
+
 #### 4.  Cambia de rama 
 Una vez en la carpeta el proyecto cambia a la rama Dev, QA o Prod
 ```bash
 git checkout Prod
 ```
 #### 5. Entra a la carpeta src
-Ejecuta el siguente comando
+posteriormente entraremos a la carpeta src, ejecuta el siguente comando
 ```bash
 cd src
 ```
@@ -82,7 +82,7 @@ cd src
 #### 6. Correr el programa
 Una vez hecho todo esto podemos ejecutar el archivo principal para correr el programa.
 ```bash
-py .\main.py
+py main.py
 ```
 
 ### 7. Interartuar con el menú
